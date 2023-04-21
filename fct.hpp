@@ -38,6 +38,8 @@ void DisplayContact(GlobalMap &gl);
  * @brief Welcome menu
  * @details User has to choose between different options 
  * (add contact, search contact, delete contact, ..)
+ * 
+ * @return An integer corresponding to an option in the menu
 */
 uint16_t WelcomeMenu();
 
