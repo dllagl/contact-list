@@ -1,5 +1,5 @@
 /**
- * @file fct.cpp
+ * @file fct.hpp
  * @author Anthony D.
  * @date 21 avril 2023
  * 

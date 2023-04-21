@@ -83,7 +83,7 @@ uint16_t WelcomeMenu() {
     std::cout << "[3] Delete contact from registery (TODO)" << std::endl;
 
 
-    int userChoice;
+    uint16_t userChoice;
     std::cout << "Choose an available option : ";
     std::cin >> userChoice;
     fflush(stdin);
