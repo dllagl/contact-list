@@ -49,7 +49,7 @@ brew install doxygen
 Cette commande créera un fichier nommé `doxyfile` qui contiendra toutes les 
 configurations liées à la documentation de votre code. 
 ```bash
-cd path/to/client/folder
+cd path/to/contact-list
 doxygen -g
 ```
 
@@ -57,7 +57,7 @@ doxygen -g
 
 Cette commande créera les dossiers `html` et `latex` qui contiendront la documentation des différents fichiers. 
 ```bash
-cd path/to/client/folder
+cd path/to/contact-list
 doxygen
 ```
 
