@@ -20,7 +20,7 @@ typedef std::map<std::string,Contact > GlobalMap;
 
 #define NAME "Name"
 #define NUMBER "Phone number"
-#define EMAIL "e-mail"
+#define EMAIL "E-mail"
 #define ADDRESS "Home address"
 
 /** 
@@ -40,6 +40,12 @@ void DisplayContact(GlobalMap &gl);
  * @param gl Reference to the global registery containing contacts
 */
 void DeleteContact(GlobalMap &gl);
+
+/**
+ * @brief ask user whether to add email to contact or not
+ * @param co Reference to the contact of interest in the registery
+*/
+void addEmailToContact(Contact &co);
 
 /**
  * @brief Welcome menu

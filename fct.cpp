@@ -18,7 +18,7 @@ void CreateContact(GlobalMap &gl) {
 
     // new variable init for user input
     std::string newName;
-    std::cout << "Please enter the contact's name : " << std::endl;
+    std::cout << "Please enter the contact's name : ";
     std::cin >> newName;
 
     // check if contact already exists
@@ -32,6 +32,9 @@ void CreateContact(GlobalMap &gl) {
         // create contact
         newContact.insert({NAME,newName});
         newContact.insert({NUMBER, newNumber});
+
+        // ask about adding email
+        addEmailToContact(newContact);
 
         // add contact to registery
         gl.insert({newName, newContact});
@@ -66,6 +69,8 @@ void DisplayContact(GlobalMap &gl) {
     std::cout << "Which contact do you wanna check? "; 
     std::cin >> contactToCheck;
 
+    putchar('\n');
+
     // check if contact exists using iterators
     GlobalMap::const_iterator it = gl.begin();
     if ((it = gl.find(contactToCheck)) != gl.end()) {
@@ -74,6 +79,24 @@ void DisplayContact(GlobalMap &gl) {
         }
     } else {
         std::cout << "Contact has not been found in the registery." << std::endl;
+    }
+}
+
+
+void addEmailToContact(Contact &co) {
+    u_char userChoice;
+    std::cout << "Would you like to provide an email for? (y/n) ";
+    std::cin >> userChoice;
+
+    if ((userChoice == 'Y') || (userChoice == 'y')) {
+
+        // ask user to enter mail
+        std::string newMail;
+        std::cout << "Please enter the email ";
+        std::cin >> newMail;
+        
+        // add mail to contact
+        co.insert({EMAIL, newMail});
     }
 }
 
