@@ -38,9 +38,7 @@ void CreateContact(GlobalMap &gl) {
 
     } else {
         std::cout << newName << " already exists." << std::endl;
-    }
-
-    
+    } 
 }
 
 void DeleteContact(GlobalMap &gl) {
@@ -68,28 +66,15 @@ void DisplayContact(GlobalMap &gl) {
     std::cout << "Which contact do you wanna check? "; 
     std::cin >> contactToCheck;
 
-
-    // parse registery 
-    bool doesContactExists = false;
-    for (auto const &c : gl) {
-
-        // check if user exists 
-        if (contactToCheck == c.first) {
-            
-            doesContactExists = true;
-
-            // display info if it exists
-            for (auto const &info : c.second) {
-                std::cout << info.first << " : " << info.second << std::endl;
-            } 
+    // check if contact exists using iterators
+    GlobalMap::const_iterator it = gl.begin();
+    if ((it = gl.find(contactToCheck)) != gl.end()) {
+        for (auto const &info : it->second) {
+            std::cout << info.first << " : " << info.second << std::endl;
         }
-    }
-
-    // warning if contact is not found 
-    if (!doesContactExists) {
+    } else {
         std::cout << "Contact has not been found in the registery." << std::endl;
     }
-
 }
 
 
