@@ -92,7 +92,6 @@ uint8_t WelcomeMenu() {
     uint8_t userChoice;
     std::cout << "Choose an available option : ";
     std::cin >> userChoice;
-    fflush(stdin);
 
     return userChoice;
 }
