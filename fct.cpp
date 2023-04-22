@@ -21,20 +21,25 @@ void CreateContact(GlobalMap &gl) {
     std::cout << "Please enter the contact's name : " << std::endl;
     std::cin >> newName;
 
-    // check if contact already exists (TODO)
+    // check if contact already exists
+    if (!gl.count(newName)) {
 
+        // ask user for phone number 
+        std::string newNumber;
+        std::cout << "Please enter the contact's phone number : ";
+        std::cin >> newNumber;
 
-    // ask user for phone number 
-    std::string newNumber;
-    std::cout << "Please enter the contact's phone number : ";
-    std::cin >> newNumber;
+        // create contact
+        newContact.insert({NAME,newName});
+        newContact.insert({NUMBER, newNumber});
 
-    // create contact
-    newContact.insert({NAME,newName});
-    newContact.insert({NUMBER, newNumber});
+        // add contact to registery
+        gl.insert({newName, newContact});
 
-    // add contact to registery
-    gl.insert({newName, newContact});
+    } else {
+        std::cout << newName << " already exists." << std::endl;
+    }
+
     
 }
 
