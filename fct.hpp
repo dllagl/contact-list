@@ -52,7 +52,7 @@ void addEmailToContact(Contact &co);
  * @details User has to choose between different options 
  * (add contact, search contact, delete contact, ..)
  * 
- * @return An integer corresponding to an option in the menu
+ * @return A char corresponding to an option in the menu
 */
 uint8_t WelcomeMenu();
 
