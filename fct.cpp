@@ -34,7 +34,7 @@ void CreateContact(GlobalMap &gl) {
         newContact.insert({NUMBER, newNumber});
 
         // ask about adding email
-        addEmailToContact(newContact);
+        AddEmailToContact(newContact);
 
         // add contact to registery
         gl.insert({newName, newContact});
@@ -83,7 +83,7 @@ void DisplayContact(GlobalMap &gl) {
 }
 
 
-void addEmailToContact(Contact &co) {
+void AddEmailToContact(Contact &co) {
     u_char userChoice;
     std::cout << "Would you like to provide an email for? (y/n) ";
     std::cin >> userChoice;

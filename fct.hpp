@@ -45,7 +45,7 @@ void DeleteContact(GlobalMap &gl);
  * @brief ask user whether to add email to contact or not
  * @param co Reference to the contact of interest in the registery
 */
-void addEmailToContact(Contact &co);
+void AddEmailToContact(Contact &co);
 
 /**
  * @brief Welcome menu
