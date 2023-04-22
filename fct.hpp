@@ -13,6 +13,7 @@
 #include <iostream>
 #include <map>
 #include <string>
+#include <stdint.h>
 
 typedef std::map<std::string,std::string> Contact;
 typedef std::map<std::string,Contact > GlobalMap;
@@ -41,7 +42,7 @@ void DisplayContact(GlobalMap &gl);
  * 
  * @return An integer corresponding to an option in the menu
 */
-uint16_t WelcomeMenu();
+uint8_t WelcomeMenu();
 
 
 #endif // DEF_FCT_HPP

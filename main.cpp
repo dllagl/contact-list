@@ -16,20 +16,20 @@
 /** @brief main function */
 int main (int argc, char * argv[]) {
 
-    std::map<std::string,Contact > contacts;
+    GlobalMap contacts;    
 
     while (true) {
 
         // wait for user input in the main menu 
-        uint16_t userChoice = WelcomeMenu();
+        uint8_t userChoice = WelcomeMenu();
 
         switch (userChoice)
         {
-        case 1: // Show a particular contact to user
+        case '1': // Show a particular contact to user
             DisplayContact(contacts);
             break;
 
-        case 2: // create and add a contact to registery
+        case '2': // create and add a contact to registery
             CreateContact(contacts);
             break;
         

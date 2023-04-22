@@ -72,7 +72,7 @@ void DisplayContact(GlobalMap &gl) {
 }
 
 
-uint16_t WelcomeMenu() {
+uint8_t WelcomeMenu() {
 
     std::cout << "\n\n";
     std::cout << "         Welcome to your contact registery !" << std::endl;
@@ -83,7 +83,7 @@ uint16_t WelcomeMenu() {
     std::cout << "[3] Delete contact from registery (TODO)" << std::endl;
 
 
-    uint16_t userChoice;
+    uint8_t userChoice;
     std::cout << "Choose an available option : ";
     std::cin >> userChoice;
     fflush(stdin);
