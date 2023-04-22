@@ -32,6 +32,10 @@ int main (int argc, char * argv[]) {
         case '2': // create and add a contact to registery
             CreateContact(contacts);
             break;
+
+        case '3': // delete a contact to registery
+            DeleteContact(contacts);
+            break;
         
         default:
             std::cout << "Please choose an available option !" << std::endl;

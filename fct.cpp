@@ -38,6 +38,22 @@ void CreateContact(GlobalMap &gl) {
     
 }
 
+void DeleteContact(GlobalMap &gl) {
+
+    putchar('\n');
+
+    // ask user which contact to delete
+    std::string contactToDelete;
+    std::cout << "Which contact would you like to delete from your registery? ";
+    std::cin >> contactToDelete;
+
+    // delete user if it exists (Map.erase returns the number of deleted elements)
+    (gl.erase(contactToDelete) == 0) ? 
+        std::cout << "Contact has not been found in the registery." << std::endl :
+        std::cout <<  contactToDelete << " has been deleted..." << std::endl;
+
+}
+
 
 void DisplayContact(GlobalMap &gl) {
 
@@ -80,7 +96,7 @@ uint8_t WelcomeMenu() {
 
     std::cout << "[1] Search for contact" << std::endl;
     std::cout << "[2] Add contact to registery" << std::endl;
-    std::cout << "[3] Delete contact from registery (TODO)" << std::endl;
+    std::cout << "[3] Delete contact from registery" << std::endl;
 
 
     uint8_t userChoice;

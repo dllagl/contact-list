@@ -36,6 +36,12 @@ void CreateContact(GlobalMap &gl);
 void DisplayContact(GlobalMap &gl);
 
 /**
+ * @brief Delete contact from global registery
+ * @param gl Reference to the global registery containing contacts
+*/
+void DeleteContact(GlobalMap &gl);
+
+/**
  * @brief Welcome menu
  * @details User has to choose between different options 
  * (add contact, search contact, delete contact, ..)
